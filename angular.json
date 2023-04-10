@@ -28,11 +28,19 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
+
+
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.scss"
+
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/@fortawesome/fontawesome-free/js/all.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -100,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "0e0d5433-6505-4b91-aefa-c4b3984b33df"
   }
 }
