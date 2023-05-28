@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { forbiddenNameValidator } from '../Custom-Validations/Username.validators';
 import { ConfirmPassVaildators } from '../Custom-Validations/ConfirmPass.vaildators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,7 @@ import { ConfirmPassVaildators } from '../Custom-Validations/ConfirmPass.vaildat
 })
 export class RegisterComponent {
 
-  constructor(private FormBuilder:FormBuilder)
+  constructor(private FormBuilder:FormBuilder,private router:Router)
   {}
 
   defaultSelectedOption:string="Where You Hear About Us";
@@ -74,9 +75,12 @@ export class RegisterComponent {
   {
     this.AlternativeEmails.removeAt(i);
   }
-  submitData()
+  submitData(RegisterationForm:FormGroup)
   {
+    console.log(RegisterationForm );
     console.log(this.RegisterationForm.value);
+    this.router.navigate(['/login']);
+
   }
 
 

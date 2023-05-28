@@ -28,6 +28,7 @@ export class NotesComponent {
      Name:['',[Validators.required,NamesValidator]],
      SelectOptions:['',[Validators.required]],
      Subscribe:[false],
+     Discount:['',[Validators.required]],
      AlternativeComment:this.formBuilder.array(['']),
 
 
@@ -64,19 +65,6 @@ export class NotesComponent {
     console.log(this.NotesForm.value);
   }
 
-  // setDiscount()
-  // {
-  //   this.Subscribe?.valueChanges.subscribe(checked =>
-  //     {
-  //      if(checked)
-  //      {
-  //       this.NotesForm.addControl('Discount', ['']);
-  //      }
-  //      else{
-  //       this.NotesForm.removeControl('Discount');
-  //      }
-  //      this.NotesForm.updateValueAndValidity()
-  //     });
-  // }
+
 
 }

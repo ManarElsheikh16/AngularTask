@@ -15,7 +15,7 @@ export class CommentsComponent  {
   constructor(private _ActivatedRoute:ActivatedRoute,private _postsService:PostsService){}
   ngOnInit(): void {
     this._ActivatedRoute.paramMap.subscribe(params => {
-      this.postId = params.get('postId');
+      this.postId = params.get('id');
       this._postsService.GetComment(this.postId).subscribe(comments => {
         this.comments = comments;
       });
